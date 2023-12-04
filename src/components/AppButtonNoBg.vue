@@ -17,11 +17,11 @@ export default {
 @use "../style/partials/variables" as *;
 
 button {
-  background-color: $primary-green;
-  border: none;
+  border: 1px solid $primary-green;
   padding: .5rem 1rem;
   cursor: pointer;
   border-radius: 3px;
+  background-color: transparent;
 
   &:hover {
     filter: brightness(120%)

@@ -25,7 +25,7 @@ strong {
         border-top-left-radius: 60px;
     }
     span:last-child {
-        color: $adv-bg;
+        color: rgb(219, 219, 219);
     }
 }
 </style>
