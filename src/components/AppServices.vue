@@ -1,12 +1,47 @@
 <script>
+import AppCardService from './AppCardService.vue';
+import AppButton from './AppButton.vue';
 export default {
-
+  components: { AppCardService, AppButton },
+  data() {
+    return {
+      attributes: ["Tradition", "Quality", "Security"],
+      cardsArray: [
+        {
+          imgUrl: "gallery-3",
+          title: "Technology",
+          text: "Focused on developing technology solutions adapted to our client's needs."
+        },
+        {
+          imgUrl: "gallery-5",
+          title: "Transport",
+          text: "We develop operational strategies to improve logistical efficiency."
+        }
+      ]
+    }
+  }
 }
 </script>
 
 <template>
   <section>
-    <h2>SERVICE SECTION</h2>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <div class="card">
+            <p>OUR BUSINESS AREAS</p>
+            <h3>Logistics Services</h3>
+            <p>We are leaders in providing ligistics services with a set of cutting edge technologies and a team of
+              experienced and renowned professionals.</p>
+            <div class="attributes">
+              <span v-for="item in attributes">{{ item }}</span>
+            </div>
+            <AppButton :textButton="'READ MORE'" />
+          </div>
+          <AppCardService v-for="item in cardsArray" :cardContent="item" />
+        </div>
+      </div>
+    </div>
   </section>
 </template>
 
@@ -14,4 +49,40 @@ export default {
 @use "../style/partials/mixins" as *;
 @use "../style/partials/variables" as *;
 
+section {
+  background-color: $light-bg;
+  padding: 3rem 0;
+}
+
+.col {
+  @include flex(row, center, stretch);
+  gap: 1rem;
+
+  .card {
+    width: calc((100% - 2rem) / 3);
+    @include flex (column, space-between, flex-start);
+    gap: 1rem;
+
+    .attributes {
+      span {
+        color: $primary-green;
+        padding: .5rem;
+        background-color: rgba($color: $primary-green, $alpha: 0.2);
+
+        &:nth-child(2) {
+          margin: 0 1rem;
+        }
+      }
+    }
+
+    h3 {
+      font-size: 2rem;
+    }
+
+    p:first-child {
+      color: $primary-green;
+      font-weight: bolder;
+    }
+  }
+}
 </style>
