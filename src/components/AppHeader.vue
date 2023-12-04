@@ -45,7 +45,7 @@ export default {
                 </div>
             </div>
         </div>
-        <div class="header-bottom">
+        <div class="hero">
             <img :src="getImg()" alt="">
             <div class="container">
                 <div class="top">
@@ -103,7 +103,7 @@ export default {
     }
 }
 
-.header-bottom {
+.hero {
     min-height: 600px;
     padding: 1.5rem 0;
     position: relative;
@@ -152,18 +152,10 @@ export default {
                 font-size: 3.5rem;
 
                 span {
-                    position: relative;
-
-                    &::before {
-                        position: absolute;
-                        content: "";
-                        display: inline-block;
-                        bottom: 10%;
-                        left: 0;
-                        background-color: rgba($color: $primary-green, $alpha: .5);
-                        width: 100%;
-                        height: 40%;
-                    }
+                    display: inline-block;
+                    background-color: rgba($color: $primary-green, $alpha: 0.5);
+                    height: 30px;
+                    line-height: 5px;
                 }
             }
 

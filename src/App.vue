@@ -8,12 +8,17 @@ import AppNewsLetter from './components/AppNewsLetter.vue';
 import AppFormMessage from './components/AppFormMessage.vue';
 import AppFooter from './components/AppFooter.vue';
 export default {
-  components: { AppHeader, AppServices, AppAboutCompany, AppAdv, AppNews, AppNewsLetter, AppFormMessage, AppFooter}
+  components: { AppHeader, AppServices, AppAboutCompany, AppAdv, AppNews, AppNewsLetter, AppFormMessage, AppFooter},
+  methods: {
+    getImg(img) {
+            return new URL(`../assets/img/${img}.jpg`, import.meta.url).href
+        }
+  }
 }
 </script>
 
 <template>
-  <AppHeader />
+  <AppHeader @getImg="getImg"/>
   <main>
     <AppServices />
     <AppAboutCompany />

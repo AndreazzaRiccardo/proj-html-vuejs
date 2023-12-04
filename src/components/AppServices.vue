@@ -38,7 +38,7 @@ export default {
             </div>
             <AppButton :textButton="'READ MORE'" />
           </div>
-          <AppCardService v-for="item in cardsArray" :cardContent="item" />
+          <AppCardService v-for="item in cardsArray" :cardContent="item" @getImg=""/>
         </div>
       </div>
     </div>
