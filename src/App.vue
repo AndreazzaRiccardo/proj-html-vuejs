@@ -26,8 +26,9 @@ export default {
 </template>
 
 <style lang="scss">
+@use "@fortawesome/fontawesome-free/css/all.css";
 @use "./style/general.scss";
-@use "@fortawesom/fontawesome-free/css/all.css";
+
 
 
 </style>
