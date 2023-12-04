@@ -30,6 +30,9 @@ export default {
 
 <template>
   <section>
+    <div class="decoration top">
+      <p v-for="n in 36">.</p>
+    </div>
     <div class="text">
       <p>ABOUT THE NETWORK</p>
       <h2><span>The</span> Company</h2>
@@ -37,6 +40,9 @@ export default {
       <AppCardAboutCompany v-for="card in attributeArray" :cardContent="card" />
     </div>
     <img :src="getImg('about-5')" alt="">
+    <div class="decoration bottom">
+      <p v-for="n in 36">.</p>
+    </div>
   </section>
 </template>
 
@@ -47,6 +53,30 @@ export default {
 section {
   background-color: $dark-bg;
   @include flex;
+  position: relative;
+
+  .decoration {
+    display: flex;
+    flex-wrap: wrap;
+    width: 150px;
+    position: absolute;
+    height: 30px;
+
+    &.top {
+      top: -51px;
+    }
+
+    &.bottom {
+      bottom: 21px;
+    }
+
+    p {
+      width: calc(100% / 9);
+      color: rgba($color: $primary-green, $alpha: .3);
+      font-size: 70px;
+      line-height: 15px;
+    }
+  }
 
   .text {
     width: calc(75% / 2);
