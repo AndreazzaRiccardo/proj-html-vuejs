@@ -16,7 +16,7 @@ export default {
       <form action="">
         <label for="name"><input placeholder="Name" type="text" id="name"></label>
         <label for="e-mail"><input placeholder="Email" type="email" id="e-mail"></label>
-        <AppButton :textButton="'SUBSCRIBE'" />
+        <AppButton :textButton="'SUBSCRIBE'" :background="true"/>
       </form>
     </div>
   </section>

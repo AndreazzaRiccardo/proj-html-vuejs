@@ -1,9 +1,8 @@
 <script>
 import AppLogo from './AppLogo.vue';
 import AppButton from './AppButton.vue';
-import AppButtonNoBg from './AppButtonNoBg.vue';
 export default {
-    components: { AppLogo, AppButton, AppButtonNoBg },
+    components: { AppLogo, AppButton },
     data() {
         return {
             headerMenu: ["HOME", "SERVICES", "SKILLS", "PARTNERS", "BLOG"]
@@ -34,13 +33,13 @@ export default {
                         <i class="fa-solid fa-envelope"></i> hello@example.com
                     </p>
                     <p>
-                        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/people/Nexgen-Dispatching-LLC/100092162691560/?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
                     </p>
                     <p>
                         <a href=""><i class="fa-brands fa-twitter"></i></a>
                     </p>
                     <p>
-                        <a href=""><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://tr.linkedin.com/company/nexgen-logistics"><i class="fa-brands fa-linkedin-in"></i></a>
                     </p>
                 </div>
             </div>
@@ -53,7 +52,7 @@ export default {
                     <div class="menu">
                         <ul>
                             <li v-for="item in headerMenu" :key="item"><a  href="">{{ item }}</a></li>
-                            <li><AppButton :textButton="'GET IN TOUCH'" /></li>
+                            <li><AppButton :textButton="'GET IN TOUCH'" :background="true"/></li>
                         </ul>
                     </div>
                 </div>
@@ -61,8 +60,8 @@ export default {
                     <h2><span>Logistics</span> that goes further.</h2>
                     <p>For 20 years working with the most innovative in the field of transport.</p>
                     <div class="btns">
-                        <AppButton :textButton="'GET IN TOUCH'" />
-                        <AppButtonNoBg :textButton="'READ MORE'" />
+                        <AppButton :textButton="'GET IN TOUCH'" :background="true"/>
+                        <AppButton :textButton="'READ MORE'" />
                     </div>
                 </div>
             </div>
@@ -138,10 +137,6 @@ export default {
                     text-decoration: none;
                     color: $white-bg;
                     margin: 0 1rem;
-
-                    &:hover {
-                        filter: brightness(80%)
-                    }
                 }
             }
         }

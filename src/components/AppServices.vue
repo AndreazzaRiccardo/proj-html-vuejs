@@ -36,7 +36,7 @@ export default {
             <div class="attributes">
               <span v-for="item in attributes">{{ item }}</span>
             </div>
-            <AppButton :textButton="'READ MORE'" />
+            <AppButton :textButton="'READ MORE'" :background="true"/>
           </div>
           <AppCardService v-for="item in cardsArray" :key="item.imgUrl" :cardContent="item" @getImg="" />
         </div>

@@ -32,7 +32,7 @@ export default {
         <h4>Latest <span>News</span></h4>
         <div class="btn-section">
           <p>Every week we publish content about what is best in the business world.</p>
-          <AppButton :textButton="'SEE ALL'" />
+          <AppButton :textButton="'SEE ALL'" :background="true"/>
         </div>
         <div class="cards">
           <AppCardNews v-for="card in cardsArray" :cardContent="card" />
