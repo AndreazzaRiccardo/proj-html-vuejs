@@ -13,11 +13,11 @@ export default {
         <h4><span>Know</span> First</h4>
         <p>Follow closely and receive content about our company and the news of the current market.</p>
       </div>
-      <div class="form">
+      <form action="">
         <label for="name"><input placeholder="Name" type="text" id="name"></label>
         <label for="e-mail"><input placeholder="Email" type="email" id="e-mail"></label>
         <AppButton :textButton="'SUBSCRIBE'" />
-      </div>
+      </form>
     </div>
   </section>
 </template>
@@ -37,14 +37,14 @@ section {
     @include flex;
     gap: 1rem;
 
-    .form {
+    form {
       @include flex(column, center, flex-start);
       gap: 1rem;
 
       input {
         min-width: 250px;
         min-height: 30px;
-        background-color: rgba($color: $white-bg, $alpha: .5);
+        background-color: rgba($color: $white-bg, $alpha: .6);
         border: none;
         padding: 0 .5rem;
         outline: none;
@@ -61,7 +61,6 @@ section {
       p {
         font-size: .9rem;
         color: $primary-green;
-        font-weight: bold;
 
         &:last-child {
           color: $adv-bg;

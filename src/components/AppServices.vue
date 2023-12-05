@@ -51,7 +51,7 @@ export default {
 
 section {
   background-color: $light-bg;
-  padding: 3rem 0;
+  padding: 150px 0;
 }
 
 .col {

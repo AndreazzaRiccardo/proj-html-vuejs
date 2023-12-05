@@ -107,7 +107,6 @@ export default {
     p {
       color: $adv-bg;
       font-size: .9rem;
-      font-weight: bold;
 
       span {
         color: $primary-green;

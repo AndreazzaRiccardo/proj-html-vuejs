@@ -13,16 +13,18 @@ export default {
         <p>SEND A MESSAGE</p>
         <h4>Get in <span>Touch</span></h4>
         <p>We will respond to your message as soon as possible.</p>
-        <div class="form">
-          <label for="name"><input required type="text" id="name" placeholder="Name"></label>
-          <label for="e-mail"><input required type="email" id="e-mail" placeholder="Email"></label>
-          <label for="phone"><input required type="number" id="phone" placeholder="Phone"></label>
-          <select for="info">
-            <option value="">More info</option>
-          </select>
-          <label for="message"><textarea required id="message" placeholder="Message"></textarea></label>
-        </div>
-        <AppButton :textButton="'SEND'" />
+        <form action="">
+          <div class="form">
+            <label for="name"><input required type="text" id="name" placeholder="Name"></label>
+            <label for="e-mail"><input required type="email" id="e-mail" placeholder="Email"></label>
+            <label for="phone"><input required type="number" id="phone" placeholder="Phone"></label>
+            <select for="info">
+              <option value="">More info</option>
+            </select>
+            <label for="message"><textarea required id="message" placeholder="Message"></textarea></label>
+          </div>
+          <AppButton :textButton="'SEND'" />
+        </form>
       </div>
       <div class="contacts">
         <h6>Example Inc.</h6>
@@ -64,6 +66,7 @@ section {
         display: flex;
         flex-wrap: wrap;
         gap: 1rem;
+        margin-bottom: 1rem;
 
         label,
         select {
@@ -86,12 +89,12 @@ section {
           padding: 0 .5rem;
           outline: none;
           border-radius: 3px;
-          font-family: inherit;
-          resize: none;
         }
 
         textarea {
           padding: .5rem .5rem;
+          resize: none;
+          font-family: sans-serif;
         }
 
         select {
@@ -99,7 +102,7 @@ section {
           border: none;
           outline: none;
           padding: 0 .2rem;
-          color: $adv-bg;
+          color: gray;
 
           option {
             font-size: 1.5rem;
@@ -122,7 +125,6 @@ section {
       p {
         color: $adv-bg;
         font-size: .8rem;
-        font-weight: bold;
         filter: brightness(120%);
 
         &:first-child {

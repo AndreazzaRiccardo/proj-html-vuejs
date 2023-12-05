@@ -27,9 +27,9 @@ export default {
     overflow: hidden;
     width: calc(100% / 3);
     min-height: 300px;
-    display: flex;
     padding: 2.5rem;
     border-radius: 10px;
+    @include flex(row, center, flex-end);
 
     img {
         position: absolute;

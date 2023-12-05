@@ -11,7 +11,7 @@ export default {
         <div class="value" :class="{ 'line': cardContent.value == '1%' }">{{ cardContent.value }}</div>
         <div class="text">
             <h6>{{ cardContent.title }}</h6>
-            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Deleniti perspiciatis veniam pariatur</p>
         </div>
     </div>
 </template>
@@ -32,19 +32,19 @@ export default {
             content: "";
             position: absolute;
             width: 5px;
-            height: 1px;
+            height: 2px;
             background-color: $primary-green;
-            left: -10.5%;
+            left: -8.5%;
         }
     }
 
     .value {
-        height: 30px;
-        width: 30px;
+        height: 69px;
+        width: 69px;
         border: 5px solid rgba($color: $adv-bg, $alpha: 0.3);
         border-radius: 50%;
         padding: 1.5rem;
-        line-height: 30px;
+        line-height: 69px;
         @include flex;
     }
 
