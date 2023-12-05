@@ -8,7 +8,7 @@ export default {
 
 <template>
   <button>
-    <a href="">{{ textButton }}</a>
+    <a :class="{'green' : textButton == 'VIEW MAP'}" href="">{{ textButton }}</a>
   </button>
 </template>
 
@@ -31,6 +31,10 @@ button {
     text-decoration: none;
     color: $white-bg;
     font-weight: bold;
+
+    &.green {
+      color: $primary-green;
+    }
   }
 }
 </style>

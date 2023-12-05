@@ -48,6 +48,7 @@ section {
         border: none;
         padding: 0 .5rem;
         outline: none;
+        border-radius: 3px;
       }
     }
 
