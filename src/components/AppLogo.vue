@@ -18,6 +18,7 @@ export default {
 
 strong {
     letter-spacing: 5px;
+    line-height: 40px;
 
     span:first-child {
         color: $primary-green;
