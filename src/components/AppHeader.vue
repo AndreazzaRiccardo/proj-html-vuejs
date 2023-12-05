@@ -51,8 +51,10 @@ export default {
                 <div class="top">
                     <AppLogo />
                     <div class="menu">
-                        <a v-for="item in headerMenu" href="">{{ item }}</a>
-                        <AppButton :textButton="'GET IN TOUCH'" />
+                        <ul>
+                            <li v-for="item in headerMenu" :key="item"><a  href="">{{ item }}</a></li>
+                            <li><AppButton :textButton="'GET IN TOUCH'" /></li>
+                        </ul>
                     </div>
                 </div>
                 <div class="bottom">
@@ -128,6 +130,10 @@ export default {
             width: 100%;
 
             .menu {
+                 ul {
+                    @include flex(row, space-between);
+                    list-style-type: none;
+                 }
                 a {
                     text-decoration: none;
                     color: $white-bg;

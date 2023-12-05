@@ -9,7 +9,7 @@ export default {
 <template>
   <section>
     <div class="container">
-      <div class="send-message">
+      <div class="send-message" id="get-in-touch">
         <p>SEND A MESSAGE</p>
         <h4>Get in <span>Touch</span></h4>
         <p>We will respond to your message as soon as possible.</p>
@@ -27,7 +27,7 @@ export default {
       <div class="contacts">
         <h6>Example Inc.</h6>
         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        <p>Sit ipsam itaque ex eum earum, quisquam corporis inventore iusto necessitatibus minima quaerat.</p>
+        <p>Sit ipsam itaque ex eum earum, quisquam corporis inventore iusto.</p>
         <a href="">
           <i class="fa-solid fa-phone"></i> + 1 (305) 1234-5678
         </a>
@@ -52,7 +52,7 @@ section {
   padding: 4rem 0;
 
   .container {
-    @include flex;
+    @include flex(row, flex-start, flex-start);
     gap: 2rem;
 
     .send-message {
@@ -110,7 +110,7 @@ section {
       }
 
       h4 {
-        font-size: 1.5rem;
+        font-size: 2rem;
 
         span {
           background-color: rgba($color: $primary-green, $alpha: .3);
@@ -123,6 +123,7 @@ section {
         color: $adv-bg;
         font-size: .8rem;
         font-weight: bold;
+        filter: brightness(120%);
 
         &:first-child {
           color: $primary-green;
@@ -161,4 +162,5 @@ section {
       }
     }
   }
-}</style>
+}
+</style>

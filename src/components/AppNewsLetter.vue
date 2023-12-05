@@ -69,7 +69,7 @@ section {
       }
 
       h4 {
-        font-size: 1.5rem;
+        font-size: 2rem;
 
         span {
           background-color: rgba($color: $primary-green, $alpha: .3);

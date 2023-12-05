@@ -6,7 +6,7 @@ export default {
     methods: {
         getImg(img) {
             return new URL(`../assets/img/${img}.jpg`, import.meta.url).href
-        },
+        }
     }
 }
 </script>
@@ -28,7 +28,7 @@ export default {
     width: calc(100% / 3);
     min-height: 300px;
     display: flex;
-    padding: 2rem;
+    padding: 2.5rem;
     border-radius: 10px;
 
     img {
@@ -41,7 +41,7 @@ export default {
     }
 
     p {
-        font-size: 1.3rem;
+        font-size: 1.2rem;
         position: relative;
         color: white;
         font-weight: bolder;

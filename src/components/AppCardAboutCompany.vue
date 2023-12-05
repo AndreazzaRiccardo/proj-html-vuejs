@@ -8,7 +8,7 @@ export default {
 
 <template>
     <div class="card-company">
-        <div class="value" :class="{ 'line' : cardContent.value == '1%' }">{{ cardContent.value }}</div>
+        <div class="value" :class="{ 'line': cardContent.value == '1%' }">{{ cardContent.value }}</div>
         <div class="text">
             <h6>{{ cardContent.title }}</h6>
             <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>

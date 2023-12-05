@@ -9,8 +9,12 @@ export default {
 <template>
     <div class="card">
         <h5>{{ cardText.title }}</h5>
-        <a v-for="link in cardText.links" :key="cardText.title" href=""><i class="fa-solid fa-angle-right"></i> {{ link
-        }}</a>
+        <ul>
+            <li v-for="link in cardText.links" :key="cardText.title">
+                <a href=""><i class="fa-solid fa-angle-right"></i> {{ link }}</a>
+            </li>
+        </ul>
+
     </div>
 </template>
 
@@ -23,6 +27,14 @@ export default {
     padding: 1.5rem;
     border-radius: 10px;
 
+    ul {
+        list-style-type: none;
+
+        li {
+            margin-bottom: .5rem;
+        }
+    }
+
     h5 {
         font-size: 1.5rem;
         color: $white-bg;
@@ -30,9 +42,10 @@ export default {
     }
 
     a {
-        font-size: .8rem;
         text-decoration: none;
         color: $adv-bg;
+        font-size: .8rem;
+        text-wrap: nowrap;
 
         i {
             margin-right: .5rem;

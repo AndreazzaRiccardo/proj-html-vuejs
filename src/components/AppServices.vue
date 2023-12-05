@@ -38,7 +38,7 @@ export default {
             </div>
             <AppButton :textButton="'READ MORE'" />
           </div>
-          <AppCardService v-for="item in cardsArray" :cardContent="item" @getImg=""/>
+          <AppCardService v-for="item in cardsArray" :key="item.imgUrl" :cardContent="item" @getImg="" />
         </div>
       </div>
     </div>
@@ -62,6 +62,7 @@ section {
     width: calc((100% - 2rem) / 3);
     @include flex (column, space-between, flex-start);
     gap: 1rem;
+    padding-right: 2rem;
 
     .attributes {
       span {

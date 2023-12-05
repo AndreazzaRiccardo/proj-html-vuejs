@@ -12,7 +12,7 @@ export default {
   <section>
     <div class="container">
       <img class="more-small" :src="getImg(5)" alt="">
-      <img :class="{ 'more-small': n === 5 }" v-for="n in 5" :src="getImg(n)" alt="">
+      <img :class="{ 'more-small': n === 5 }" v-for="n in 5" :key="n" :src="getImg(n)" alt="">
     </div>
   </section>
 </template>
@@ -37,6 +37,5 @@ section {
       filter: invert(60%);
     }
   }
-
 }
 </style>

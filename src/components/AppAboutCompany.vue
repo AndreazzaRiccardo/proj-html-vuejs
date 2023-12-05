@@ -37,7 +37,7 @@ export default {
       <p>ABOUT THE NETWORK</p>
       <h2><span>The</span> Company</h2>
       <p>With all of this expertise and capability comes an unrivalled commitment to customer service.</p>
-      <AppCardAboutCompany v-for="card in attributeArray" :cardContent="card" />
+      <AppCardAboutCompany v-for="card in attributeArray" :key="card.title" :cardContent="card" />
     </div>
     <img :src="getImg('about-5')" alt="">
     <div class="decoration bottom">
@@ -100,8 +100,9 @@ section {
 
       &:first-child {
         color: $primary-green;
-        font-size: .5rem;
+        font-size: .7rem;
         margin-bottom: 1rem;
+        font-weight: bold;
       }
     }
 

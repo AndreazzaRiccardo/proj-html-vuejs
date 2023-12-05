@@ -54,12 +54,12 @@ section {
   &>p {
     color: $primary-green;
     font-weight: bolder;
-    font-size: .9rem;
-    filter: brightness(150%);
+    font-size: .8rem;
+    filter: brightness(120%);
   }
 
   h4 {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
     margin: 1rem 0;
 
     span {
@@ -75,6 +75,7 @@ section {
 
     p {
       color: $adv-bg;
+      font-size: .9rem
     }
   }
 

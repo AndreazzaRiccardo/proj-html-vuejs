@@ -81,6 +81,7 @@ export default {
       p {
         color: $adv-bg;
         margin: 1.5rem 0;
+        font-size: .8rem;
       }
 
       a {
@@ -115,4 +116,5 @@ export default {
 
   }
 
-}</style>
+}
+</style>
