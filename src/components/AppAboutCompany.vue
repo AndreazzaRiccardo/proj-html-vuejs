@@ -82,6 +82,7 @@ section {
     width: calc(75% / 2);
     margin-left: auto;
     color: $white-bg;
+    padding-right: 3rem;
 
     h2 {
       margin-bottom: 1rem;
