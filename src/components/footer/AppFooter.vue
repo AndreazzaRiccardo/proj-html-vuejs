@@ -39,7 +39,7 @@ export default {
             <i class="fa-solid fa-envelope"></i> hello@example.com
           </a>
           <a
-            href="https://www.google.com/maps/place/101+3rd+Ave+W,+Bradenton,+FL+34205/@27.496425,-82.563613,14z/data=!4m6!3m5!1s0x88c317d099e271a3:0xdaa0a4ffa890a3da!8m2!3d27.4965394!4d-82.5640846!16s%2Fg%2F11fvb6t3m9?hl=it-IT&entry=ttu">
+            href="">
             <i class="fa-solid fa-location-dot"></i> Main Avenue, 987
           </a>
           <AppButton :textButton="'GET IN TOUCH'" />
