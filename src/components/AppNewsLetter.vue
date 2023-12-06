@@ -16,7 +16,7 @@ export default {
       <form action="">
         <label for="name"><input placeholder="Name" type="text" id="name"></label>
         <label for="e-mail"><input placeholder="Email" type="email" id="e-mail"></label>
-        <AppButton :textButton="'SUBSCRIBE'" :background="true"/>
+        <AppButton :textButton="'SUBSCRIBE'" :background="true" />
       </form>
     </div>
   </section>
@@ -36,6 +36,11 @@ section {
   .container {
     @include flex;
     gap: 1rem;
+
+    @include responsive ("md") {
+      flex-direction: column;
+      padding: 1rem 0;
+    }
 
     form {
       @include flex(column, center, flex-start);

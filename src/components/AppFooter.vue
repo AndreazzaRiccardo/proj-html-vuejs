@@ -66,14 +66,35 @@ export default {
   background-position: center;
   padding: 5rem 0;
 
+  @include responsive ("md") {
+    padding: 2rem 0;
+  }
+
   .container {
     @include flex(row, space-between, stretch);
     gap: 1.5rem;
+
+    @include responsive ('lg') {
+      flex-wrap: wrap;
+    }
 
     .card {
       @include flex(column, flex-start, flex-start);
       gap: .5rem;
       width: calc((100% - 1.5rem) / 4);
+
+      @include responsive ('lg') {
+        &:first-child {
+          width: 100%;
+          align-items: center;
+        }
+
+        width: calc((100% - 3rem) / 3);
+
+        @include responsive ("md") {
+          width: 100%;
+        }
+      }
 
       a:nth-child(5) {
         margin-bottom: 2rem;
@@ -104,10 +125,19 @@ export default {
 
   .container {
     @include flex(row, space-between, flex-end);
+    gap: .5rem;
 
     p {
       color: $adv-bg;
       font-size: .9rem;
+
+      @include responsive ('lg') {
+        font-size: .7rem;
+      }
+
+      @include responsive ("md") {
+        font-size: .6rem;
+      }
 
       a {
         color: $primary-green;

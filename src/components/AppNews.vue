@@ -32,7 +32,7 @@ export default {
         <h4>Latest <span>News</span></h4>
         <div class="btn-section">
           <p>Every week we publish content about what is best in the business world.</p>
-          <AppButton :textButton="'SEE ALL'" :background="true"/>
+          <AppButton :textButton="'SEE ALL'" :background="true" />
         </div>
         <div class="cards">
           <AppCardNews v-for="card in cardsArray" :cardContent="card" />
@@ -48,9 +48,14 @@ export default {
 
 section {
   padding: 5rem 0;
+
+  @include responsive ("md") {
+    padding: 2rem 0;
+  }
 }
 
 .news-text {
+
   &>p {
     color: $primary-green;
     font-weight: bolder;
@@ -72,6 +77,12 @@ section {
   .btn-section {
     @include flex(row, space-between);
     margin-bottom: 1.5rem;
+
+    @include responsive ("md") {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1rem;
+    }
 
     p {
       color: $adv-bg;

@@ -6,7 +6,7 @@ export default {
   },
   methods: {
     showSection(text) {
-      if(text === "GET IN TOUCH") {
+      if (text === "GET IN TOUCH") {
         return '#get-in-touch'
       }
     }
@@ -15,8 +15,8 @@ export default {
 </script>
 
 <template>
-  <button :class="{'bg' : background}">
-    <a :class="{'green' : textButton == 'VIEW MAP' }" :href="showSection(textButton)">{{ textButton }}</a>
+  <button :class="{ 'bg': background }">
+    <a :class="{ 'green': textButton == 'VIEW MAP' }" :href="showSection(textButton)">{{ textButton }}</a>
   </button>
 </template>
 
@@ -31,14 +31,19 @@ button {
   cursor: pointer;
   border-radius: 3px;
 
+  @include responsive ("lg") {
+    font-size: .7rem;
+    text-wrap: nowrap;
+  }
+
   &.bg {
     background-color: $primary-green;
     border: none;
   }
 
   .green {
-      color: $primary-green;
-    }
+    color: $primary-green;
+  }
 
   &:hover {
     filter: brightness(120%)

@@ -31,6 +31,16 @@ export default {
     @include flex (column, flex-start, flex-start);
     gap: 1rem;
 
+    @include responsive ("lg") {
+        width: calc((100% - 1rem) / 2);
+        align-self: stretch;
+        margin-top: 2rem;
+    }
+
+    @include responsive ("md") {
+        padding: 1rem 1.5rem;
+    }
+
     img {
         max-width: 100%;
     }

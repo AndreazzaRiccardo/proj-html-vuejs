@@ -55,6 +55,12 @@ section {
   @include flex;
   position: relative;
 
+  @include responsive ("md") {}
+
+  @include responsive ("lg") {
+    font-size: .8rem;
+  }
+
   .decoration {
     display: flex;
     flex-wrap: wrap;
@@ -64,10 +70,18 @@ section {
 
     &.top {
       top: -51px;
+
+      @include responsive ("md") {
+        top: -45px;
+      }
     }
 
     &.bottom {
       bottom: 21px;
+
+      @include responsive ("md") {
+        bottom: 15px;
+      }
     }
 
     p {
@@ -75,6 +89,10 @@ section {
       color: rgba($color: $primary-green, $alpha: .3);
       font-size: 70px;
       line-height: 15px;
+
+      @include responsive ("md") {
+        font-size: 50px;
+      }
     }
   }
 
@@ -83,6 +101,17 @@ section {
     margin-left: auto;
     color: $white-bg;
     padding-right: 3rem;
+
+    @include responsive ("lg") {
+      padding: 2rem 3rem 2rem 0;
+    }
+
+    @include responsive ("md") {
+      margin: 0;
+      padding: 3rem 0;
+      width: 95%;
+      margin: 0 auto;
+    }
 
     h2 {
       margin-bottom: 1rem;
@@ -110,6 +139,15 @@ section {
 
   img {
     width: 50%;
+
+    @include responsive ("lg") {
+      object-fit: cover;
+      min-height: 700px;
+    }
+
+    @include responsive ("md") {
+      display: none;
+    }
   }
 }
 </style>

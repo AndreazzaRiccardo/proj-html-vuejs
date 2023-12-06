@@ -36,7 +36,7 @@ export default {
             <div class="attributes">
               <span v-for="item in attributes">{{ item }}</span>
             </div>
-            <AppButton :textButton="'READ MORE'" :background="true"/>
+            <AppButton :textButton="'READ MORE'" :background="true" />
           </div>
           <AppCardService v-for="item in cardsArray" :key="item.imgUrl" :cardContent="item" @getImg="" />
         </div>
@@ -52,17 +52,33 @@ export default {
 section {
   background-color: $light-bg;
   padding: 150px 0;
+
+  @include responsive ("lg") {
+    padding: 100px 0;
+  }
+
+  @include responsive ("md") {
+    padding: 50px 0;
+  }
 }
 
 .col {
   @include flex(row, center, stretch);
   gap: 1rem;
 
+  @include responsive ("lg") {
+    @include flex(row, center, center, wrap);
+  }
+
   .card {
     width: calc((100% - 2rem) / 3);
     @include flex (column, space-between, flex-start);
     gap: 1rem;
     padding-right: 2rem;
+
+    @include responsive ("lg") {
+      width: 100%;
+    }
 
     .attributes {
       span {

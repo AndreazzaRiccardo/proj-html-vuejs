@@ -33,13 +33,15 @@ export default {
                         <i class="fa-solid fa-envelope"></i> hello@example.com
                     </p>
                     <p>
-                        <a href="https://www.facebook.com/people/Nexgen-Dispatching-LLC/100092162691560/?mibextid=ZbWKwL"><i class="fa-brands fa-facebook-f"></i></a>
+                        <a href="https://www.facebook.com/people/Nexgen-Dispatching-LLC/100092162691560/?mibextid=ZbWKwL"><i
+                                class="fa-brands fa-facebook-f"></i></a>
                     </p>
                     <p>
                         <a href=""><i class="fa-brands fa-twitter"></i></a>
                     </p>
                     <p>
-                        <a href="https://tr.linkedin.com/company/nexgen-logistics"><i class="fa-brands fa-linkedin-in"></i></a>
+                        <a href="https://tr.linkedin.com/company/nexgen-logistics"><i
+                                class="fa-brands fa-linkedin-in"></i></a>
                     </p>
                 </div>
             </div>
@@ -51,8 +53,10 @@ export default {
                     <AppLogo />
                     <div class="menu">
                         <ul>
-                            <li v-for="item in headerMenu" :key="item"><a  href="">{{ item }}</a></li>
-                            <li><AppButton :textButton="'GET IN TOUCH'" :background="true"/></li>
+                            <li v-for="item in headerMenu" :key="item"><a href="">{{ item }}</a></li>
+                            <li>
+                                <AppButton :textButton="'GET IN TOUCH'" :background="true" />
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -60,7 +64,7 @@ export default {
                     <h2><span>Logistics</span> that goes further.</h2>
                     <p>For 20 years working with the most innovative in the field of transport.</p>
                     <div class="btns">
-                        <AppButton :textButton="'GET IN TOUCH'" :background="true"/>
+                        <AppButton :textButton="'GET IN TOUCH'" :background="true" />
                         <AppButton :textButton="'READ MORE'" />
                     </div>
                 </div>
@@ -81,8 +85,20 @@ export default {
     height: 50px;
     @include flex;
 
+    @include responsive ("md") {
+        height: auto;
+    }
+
     .container {
         @include flex (row, space-between);
+
+        @include responsive ("lg") {
+            font-size: .7rem;
+        }
+
+        @include responsive ("md") {
+            align-items: flex-start;
+        }
 
         .hour {
             i {
@@ -92,6 +108,11 @@ export default {
 
         .contacts {
             @include flex;
+
+            @include responsive ("md") {
+                flex-wrap: wrap;
+                text-wrap: nowrap;
+            }
 
             p {
                 margin-left: 1.5rem;
@@ -105,10 +126,10 @@ export default {
 }
 
 .hero {
-    min-height: 600px;
-    padding: 1.5rem 0;
+    padding: 1.5rem 0 8rem 0;
     position: relative;
     overflow: hidden;
+
 
     img {
         position: absolute;
@@ -116,9 +137,18 @@ export default {
         left: 0;
         top: 0;
         width: 100%;
-        height: auto
+        height: auto;
+
+        @include responsive ("lg") {
+            height: 600px;
+            object-fit: cover
+        }
+
+        @include responsive ("md") {
+            height: 900px;
+        }
     }
-    
+
     .container {
         @include flex (column);
         gap: 6rem;
@@ -128,11 +158,22 @@ export default {
             position: relative;
             width: 100%;
 
+            @include responsive ("md") {
+                flex-direction: column;
+            }
+
             .menu {
-                 ul {
+                ul {
                     @include flex(row, space-between);
                     list-style-type: none;
-                 }
+
+                    @include responsive ("md") {
+                        flex-direction: column;
+                        gap: 1rem;
+                        margin-top: 2rem;
+                    }
+                }
+
                 a {
                     text-decoration: none;
                     color: $white-bg;
@@ -149,8 +190,16 @@ export default {
             gap: 1rem;
             width: 40%;
 
+            @include responsive ("md") {
+                width: 100%;
+            }
+
             h2 {
                 font-size: 3.5rem;
+
+                @include responsive ("lg") {
+                    font-size: 2.5rem;
+                }
 
                 span {
                     display: inline-block;

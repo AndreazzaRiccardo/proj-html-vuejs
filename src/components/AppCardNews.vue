@@ -37,7 +37,12 @@ export default {
         left: 0;
         top: 0;
         width: 100%;
-        height: auto
+        height: auto;
+
+        @include responsive ("lg") {
+            height: 100%;
+            object-fit: cover;
+        }
     }
 
     p {
@@ -47,6 +52,14 @@ export default {
         font-weight: bolder;
         text-align: center;
         align-self: flex-end;
+
+        @include responsive ("lg") {
+            font-size: 1rem;
+        }
+
+        @include responsive ("md") {
+            font-size: .8rem;
+        }
     }
 }
 </style>
