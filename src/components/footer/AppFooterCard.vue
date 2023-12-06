@@ -19,8 +19,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 .card {
     background-color: rgba($color: $adv-bg, $alpha: .1);

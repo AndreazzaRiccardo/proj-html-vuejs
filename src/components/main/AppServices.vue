@@ -1,6 +1,6 @@
 <script>
 import AppCardService from './AppCardService.vue';
-import AppButton from './AppButton.vue';
+import AppButton from '../common/AppButton.vue';
 export default {
   components: { AppCardService, AppButton },
   data() {
@@ -46,8 +46,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 section {
   background-color: $light-bg;

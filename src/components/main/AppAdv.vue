@@ -2,7 +2,7 @@
 export default {
   methods: {
     getImg(img) {
-      return new URL(`../assets/img/logo-${img}.png`, import.meta.url).href
+      return new URL(`../../assets/img/logo-${img}.png`, import.meta.url).href
     },
   }
 }
@@ -18,8 +18,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 section {
   background-color: $light-bg;

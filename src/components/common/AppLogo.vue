@@ -13,8 +13,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 strong {
     letter-spacing: 5px;

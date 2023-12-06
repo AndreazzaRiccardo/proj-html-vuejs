@@ -1,5 +1,5 @@
 <script>
-import AppButton from './AppButton.vue';
+import AppButton from '../common/AppButton.vue';
 import AppCardNews from './AppCardNews.vue';
 export default {
   components: { AppButton, AppCardNews },
@@ -43,8 +43,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 section {
   padding: 5rem 0;

@@ -1,17 +1,17 @@
 <script>
-import AppLogo from './AppLogo.vue';
-import AppButton from './AppButton.vue';
+import AppLogo from '../common/AppLogo.vue';
+import AppButton from '../common/AppButton.vue';
 export default {
     components: { AppLogo, AppButton },
     data() {
         return {
-            headerMenu: ["HOME", "SERVICES", "SKILLS", "PARTNERS", "BLOG"]
+            headerNav: ["HOME", "SERVICES", "SKILLS", "PARTNERS", "BLOG"]
         }
     },
     methods: {
         getImg() {
-            return new URL("../assets/img/jumbo.jpg", import.meta.url).href
-        },
+            return new URL("../../assets/img/jumbo.jpg", import.meta.url).href;
+        }
     }
 }
 </script>
@@ -51,14 +51,14 @@ export default {
             <div class="container">
                 <div class="top">
                     <AppLogo />
-                    <div class="menu">
+                    <nav>
                         <ul>
-                            <li v-for="item in headerMenu" :key="item"><a href="">{{ item }}</a></li>
+                            <li v-for="item in headerNav" :key="item"><a href="">{{ item }}</a></li>
                             <li>
                                 <AppButton :textButton="'GET IN TOUCH'" :background="true" />
                             </li>
                         </ul>
-                    </div>
+                    </nav>
                 </div>
                 <div class="bottom">
                     <h2><span>Logistics</span> that goes further.</h2>
@@ -75,8 +75,8 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 .header-top {
     background-color: $header-bg;
@@ -162,7 +162,7 @@ export default {
                 flex-direction: column;
             }
 
-            .menu {
+            nav {
                 ul {
                     @include flex(row, space-between);
                     list-style-type: none;

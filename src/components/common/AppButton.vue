@@ -2,7 +2,8 @@
 export default {
   props: {
     textButton: String,
-    background: Boolean
+    background: Boolean,
+    color: String
   },
   methods: {
     showSection(text) {
@@ -16,13 +17,13 @@ export default {
 
 <template>
   <button :class="{ 'bg': background }">
-    <a :class="{ 'green': textButton == 'VIEW MAP' }" :href="showSection(textButton)">{{ textButton }}</a>
+    <a :class="`${color}`" :href="showSection(textButton)">{{ textButton }}</a>
   </button>
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 button {
   background-color: transparent;

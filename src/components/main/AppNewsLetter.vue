@@ -1,5 +1,5 @@
 <script>
-import AppButton from './AppButton.vue';
+import AppButton from '../common/AppButton.vue';
 export default {
   components: { AppButton }
 }
@@ -23,12 +23,12 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 section {
   min-height: 350px;
-  background-image: url(../assets/img/bg-1.jpg);
+  background-image: url(../../assets/img/bg-1.jpg);
   background-position: center;
   background-size: cover;
   @include flex;

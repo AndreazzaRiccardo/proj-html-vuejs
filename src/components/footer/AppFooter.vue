@@ -1,7 +1,7 @@
 <script>
 import AppFooterCard from './AppFooterCard.vue';
-import AppLogo from './AppLogo.vue';
-import AppButton from './AppButton.vue';
+import AppLogo from '../common/AppLogo.vue';
+import AppButton from '../common/AppButton.vue';
 export default {
   components: { AppFooterCard, AppLogo, AppButton },
   data() {
@@ -57,11 +57,11 @@ export default {
 </template>
 
 <style lang="scss" scoped>
-@use "../style/partials/mixins" as *;
-@use "../style/partials/variables" as *;
+@use "../../style/partials/mixins" as *;
+@use "../../style/partials/variables" as *;
 
 .footer-top {
-  background-image: url(../assets/img/bg-10.jpg);
+  background-image: url(../../assets/img/bg-10.jpg);
   background-size: cover;
   background-position: center;
   padding: 5rem 0;
